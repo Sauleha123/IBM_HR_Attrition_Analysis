@@ -37,3 +37,10 @@ order by OverTime, Attrition
 -- Insights: Employees doing overtime have a much higher attrition percentage compared to those who don't.
 
 
+-- 5. Years at Company - Attrition Trend
+-- Purpose: See attrition trends over tenure.
+select YearsAtCompany, Attrition, count(*) as Count 
+from Cleaned_IBM_HR
+group by YearsAtCompany, Attrition
+order by YearsAtCompany
+-- Insights: Attrition is highest in the initial years, then drops sharply for long-tenure employees.
