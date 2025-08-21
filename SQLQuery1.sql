@@ -20,3 +20,11 @@ order by Department, Attrition
 -- Here Yes = 1 and No = 0
 
 
+-- 3. Average Monthly Income - Left vs Stayed
+-- Purpose: Explore income differences between employees who stayed and those who left.
+select Attrition, avg(MonthlyIncome) as Avg_Monthly_Income
+from Cleaned_IBM_HR
+group by Attrition
+-- Insights: Employees who left had a ~30% lower average income, suggesting pay could be a factor in attrition.
+
+
