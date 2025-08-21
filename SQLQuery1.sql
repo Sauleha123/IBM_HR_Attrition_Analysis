@@ -28,3 +28,12 @@ group by Attrition
 -- Insights: Employees who left had a ~30% lower average income, suggesting pay could be a factor in attrition.
 
 
+-- 4. Overtime Impact on Attrition
+--Purpose: Check if working overtime affects attrition
+select OverTime, Attrition, count(*) as Count 
+from Cleaned_IBM_HR
+group by OverTime, Attrition
+order by OverTime, Attrition
+-- Insights: Employees doing overtime have a much higher attrition percentage compared to those who don't.
+
+
