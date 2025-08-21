@@ -10,3 +10,13 @@ group by Attrition
 -- Insight: Around 16% of employees have left the company, which is significant and worth further investigation.
 
 
+-- 2. Attrition by Department
+--Purpose: Identify departments with highest attrition.
+select Department, Attrition, count(*) as Count
+from Cleaned_IBM_HR
+group by Department, Attrition
+order by Department, Attrition
+-- Insights: Sales and R&D departments have the highest attrition numbers
+-- Here Yes = 1 and No = 0
+
+
